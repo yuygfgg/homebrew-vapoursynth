@@ -6,6 +6,13 @@ class Obuparse < Formula
   license "ISC"
   head "https://github.com/dwbuiten/obuparse.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/saindriches/homebrew-vapoursynth/releases/download/obuparse-20240118"
+    sha256 cellar: :any,                 arm64_ventura: "9be9227d13a815e9e3a37c2c3a05974fc71df94678b6d7dee217c8e8c69306d7"
+    sha256 cellar: :any,                 ventura:       "0b91dc30c68b2507f7491f6341816c9469fc1ed163e97644b143dc21fae7e41a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6f25687240c13d5d5605b1d82c18a72c96aa17ba0ff87b0cec64aad928006204"
+  end
+
   patch :DATA if OS.mac?
 
   def install
