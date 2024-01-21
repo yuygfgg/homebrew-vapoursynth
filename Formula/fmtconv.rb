@@ -11,6 +11,13 @@ class Fmtconv < Formula
     regex(/^r(\d+(?:\.\d+)*?)$/i)
   end
 
+  bottle do
+    root_url "https://github.com/saindriches/homebrew-vapoursynth/releases/download/fmtconv-30"
+    sha256 cellar: :any,                 arm64_ventura: "30d1f7f17ec28e97757c53ebe69d23340769daa604e81238512bd08f881d27a8"
+    sha256 cellar: :any,                 ventura:       "94630405b8ec8ca5998f15fcfded9334f8962ce08f5bbf2344695f34335984c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "45fb26b645d31ec73fe23d47add5d4103463028bfdc127469f431f100d15bf99"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
