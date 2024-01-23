@@ -6,6 +6,13 @@ class VsPlacebo < Formula
   license "LGPL-2.1-only"
   head "https://github.com/Lypheo/vs-placebo.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/saindriches/homebrew-vapoursynth/releases/download/vs-placebo-1.4.4"
+    sha256 cellar: :any, arm64_ventura: "ad7d777cd8b2675a26e4a73a6df520aa3fc0a66273b2ca3af689cf3a44553c60"
+    sha256 cellar: :any, ventura:       "9bc32b443818f2600f2757b8aee5dcc922e43abe4a41590babbd24a0f9bc9a86"
+    sha256               x86_64_linux:  "ca2b61532475fdb921cb7e623b5c82846ca57367887ff9083080c3254feafbe8"
+  end
+
   depends_on "cmake" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
