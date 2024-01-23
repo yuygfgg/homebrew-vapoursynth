@@ -7,6 +7,13 @@ class Delogohd < Formula
   license "GPL-2.0-only"
   head "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/saindriches/homebrew-vapoursynth/releases/download/delogohd-12"
+    sha256 cellar: :any,                 arm64_ventura: "2411e6d8f4d3d89d490214b649f3c6fa1693a83e75624073e10eda4d423c9890"
+    sha256 cellar: :any,                 ventura:       "818c32d9e1a430df70f351aa2f86bac00916e97e65d8e7eafb8ee25c43de26cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fa45f55f0a6984dd0dfd7214b1ee50368ff0a1bce59a2320baa2b172cbb0cde1"
+  end
+
   depends_on "cmake" => :build
 
   on_arm do
