@@ -6,6 +6,13 @@ class Bm3d < Formula
   license "MIT"
   head "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/saindriches/homebrew-vapoursynth/releases/download/bm3d-9"
+    sha256 cellar: :any,                 arm64_ventura: "23917bed0ef01b8a23d8f664b5687ce9eab4f3e77473113f91a15c0dcd32603f"
+    sha256 cellar: :any,                 ventura:       "29b94f623f74423e966fd3e049112110477cd7493a0fd0d0af027404eacee1db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "83d4ba19cbc6c0242e4d9f0df9c52366f9b102bfbdde11bae566027ed83915c5"
+  end
+
   depends_on "cmake" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
