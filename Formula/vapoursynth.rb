@@ -28,8 +28,8 @@ class Vapoursynth < Formula
       ENV.prepend "LDFLAGS", "-L#{Formula["llvm"].opt_lib}/c++"
     end
 
-    ENV.append "CFLAGS", "-march=native"
-    ENV.append "CXXFLAGS", "-march=native"
+    ENV.append "CFLAGS", "-march=native -flto"
+    ENV.append "CXXFLAGS", "-march=native -flto"
 
     system "./autogen.sh"
     inreplace "Makefile.in", "pkglibdir = $(libdir)", "pkglibdir = $(exec_prefix)"
