@@ -28,7 +28,6 @@ class Vapoursynth < Formula
       ENV.prepend "LDFLAGS", "-L#{Formula["llvm"].opt_lib}/c++"
     end
 
-    # 启用 march=native 进行编译优化
     ENV.append "CFLAGS", "-march=native"
     ENV.append "CXXFLAGS", "-march=native"
 
