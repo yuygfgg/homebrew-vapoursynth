@@ -16,9 +16,9 @@ class LSmashWorks < Formula
   depends_on "cmake" => :build
   depends_on "gcc" => [:build, :recommended]
   depends_on "ninja" => :build
-  depends_on "ffmpeg"
-  depends_on "saindriches/vapoursynth/l-smash"
-  depends_on "vapoursynth"
+  depends_on "homebrew-ffmpeg/ffmpeg/ffmpeg"
+  depends_on "yuygfgg/vapoursynth/l-smash"
+  depends_on "yuygfgg/vapoursynth"
   depends_on "xxhash"
 
   fails_with :clang if build.with? "gcc"
