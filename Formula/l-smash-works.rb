@@ -6,13 +6,6 @@ class LSmashWorks < Formula
   license "ISC"
   head "https://github.com/HomeOfAviSynthPlusEvolution/L-SMASH-Works.git", branch: "master"
 
-  bottle do
-    root_url "https://github.com/saindriches/homebrew-vapoursynth/releases/download/l-smash-works-1167.0.0.0"
-    sha256 cellar: :any,                 arm64_ventura: "2d0c79a2cd07e79be40611153155176b877f5437fb0b3d4a4fb48f2d01dcf1fb"
-    sha256 cellar: :any,                 ventura:       "024b190e22a24cbdffa171988292076ff546ed76589e594c62fb95496ed58b48"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "56cf9fbbf79773b9bf1e14882b9121a9ac77fd1fa335916893b49a3203b7b2d6"
-  end
-
   depends_on "cmake" => :build
   depends_on "gcc" => [:build, :recommended]
   depends_on "ninja" => :build
