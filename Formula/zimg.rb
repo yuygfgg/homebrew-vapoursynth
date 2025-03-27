@@ -10,6 +10,8 @@ class Zimg < Formula
   depends_on "libtool" => :build
 
   def install
+    ENV.append "CFLAGS", "-march=native -flto"
+    ENV.append "CXXFLAGS", "-march=native -flto"
     system "./autogen.sh"
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
