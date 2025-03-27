@@ -1,8 +1,8 @@
-class Zimg < Formula
+tclass Zimg < Formula
   desc "Scaling, colorspace conversion, and dithering library"
   homepage "https://github.com/sekrit-twc/zimg"
   license "WTFPL"
-  head "https://github.com/sekrit-twc/zimg.git", branch: "master"
+  head "https://github.com/yuygfgg/zimg.git", branch: "resize2"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
